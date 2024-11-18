@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import math 
 import statistics 
-import plotly.express as px
 
 ussu_hesap_df = pd.DataFrame()
 ortalamalar_df = pd.DataFrame()
