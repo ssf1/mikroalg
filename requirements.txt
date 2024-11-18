@@ -1,7 +1,6 @@
 streamlit
 pandas
 numpy
-math
 statistics
 plotly
 openpyxl
