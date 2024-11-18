@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import math 
 import statistics 
+import plotly.express as px
 
 ussu_hesap_df = pd.DataFrame()
 ortalamalar_df = pd.DataFrame()
@@ -136,7 +137,14 @@ if uploaded_file is not None:
         Sd_list = ortalamalar_df.loc[2:5, j+' '].tolist()
         Se_list = ortalamalar_df.loc[2:5, j+'  '].tolist()
 
-        st.bar_chart(geo_list)
+        fig = px.bar(
+            x=isim_list,
+            y=geo_list,
+            template='plotly_white',
+            title=j + ' gene expression rate'                
+        )
+
+        st.plotly_chart(fig)
 
     
         
