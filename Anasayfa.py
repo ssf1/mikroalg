@@ -137,14 +137,7 @@ if uploaded_file is not None:
         Sd_list = ortalamalar_df.loc[2:5, j+' '].tolist()
         Se_list = ortalamalar_df.loc[2:5, j+'  '].tolist()
 
-        fig = px.bar(
-            x=isim_list,
-            y=geo_list,
-            template='plotly_white',
-            title=j + ' gene expression rate'                
-        )
-
-        st.plotly_chart(fig)
+        st.bar_chart(geo_list)
 
     
         
